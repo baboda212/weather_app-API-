@@ -17,9 +17,10 @@ ul{
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
-    outline: 1px solid rgba(0,0,0,0.35);
-    border-radius: 15px;
+    /* outline: 1px solid rgba(0,0,0,0.35);
+    border-radius: 15px; */
     padding: 10px;
+    color: #fff;
 }
 .cityname{
     font-size: 3rem;
@@ -34,4 +35,10 @@ ul{
 }
 .desc{
     font-size: 2rem;
+}
+select{
+    padding: 5px 1rem;
+    margin-top: 1rem;
+    border-style: none;
+    border-radius: 5px;
 }
