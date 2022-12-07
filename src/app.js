@@ -1,10 +1,10 @@
 /* 날씨앱 키  */
 const API_KEY = '6d41a7760070c50fef0f0cac8f58c929';
 /* https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} */
-let city_name = 'Anyang-si'; //도시명변수 설정 Anyang-si
+let city_name = 'Anyang-si'; //도시명변수 설정 seoul
 let API_URL = 
 `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${API_KEY}`;
-//서버에 보내는 요청문
+//서버에 보내는 요청문(요청주소 end point)
 
 //서버에서 fetch로 불러오는 작업은 비동기 처리(async)
 fetch(API_URL)
@@ -29,7 +29,7 @@ fetch(API_URL)
     const descEl = document.querySelector('.desc');
 
     citynameEl.textContent = name;
-    iconEl.innerHTML = `<img src=http://openweathermap.org/img/w/${weather_icon}.png alt='아이콘'/>`;
+    iconEl.innerHTML = `<img src=http://openweathermap.org/img/wn/${weather_icon}@2x.png alt='아이콘'/>`;
     tempEl.innerHTML = `${temp}&deg`;
     descEl.textContent = desc;
 
