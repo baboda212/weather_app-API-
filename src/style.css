@@ -42,3 +42,6 @@ select{
     border-style: none;
     border-radius: 5px;
 }
+.icon{
+    width: 100%;
+}

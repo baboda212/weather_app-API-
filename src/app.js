@@ -64,7 +64,8 @@ fetch(API_URL)
     const descEl = document.querySelector('.desc');
 
     citynameEl.textContent = name;
-    iconEl.innerHTML = `<img src=http://openweathermap.org/img/wn/${weather_icon}@2x.png alt='아이콘'/>`;
+    //이미지 경로 바꾸기(원하는 아이콘으로)
+    iconEl.innerHTML = `<img src=src/images/${weather_icon}.svg alt='아이콘'/>`;
     tempEl.innerHTML = `${temp}&deg`;
     descEl.textContent = desc;
 
@@ -85,7 +86,9 @@ select.addEventListener('change', function(e){
     getWeatherData(cityname);
 });
 
-
+/* 1. 날씨나 시간에 따른 배경화면 변경
+   2. 아이콘을 다른것으로 바꿀수 있다.
+   3.  */
 
 /* function myfunc(data){
     const desc = data.weather[0].main; //날씨상태설명
