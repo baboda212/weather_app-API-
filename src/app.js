@@ -69,6 +69,27 @@ fetch(API_URL)
     tempEl.innerHTML = `${temp}&deg`;
     descEl.textContent = desc;
 
+    /* 배경이미지 변경 */
+    const body = document.querySelector('body');
+    body.classList.remove(...body.classList);
+    if(desc === 'Clouds'){
+        body.classList.add('weather-clouds');
+    } else if(desc === 'Clear'){
+        body.classList.add('weather-clear'); 
+    } else if(desc === 'Thunderstorm'){
+        body.classList.add('weather-thunderstorm'); 
+    } else if(desc === 'Dizzle'){
+        body.classList.add('weather-thunderstorm'); 
+    } else if(desc === 'Rain'){
+        body.classList.add('weather-rain'); 
+    } else if(desc === 'Snow'){
+        body.classList.add('weather-snow'); 
+    } else if(desc === 'Atmosphere'){
+        body.classList.add('weather-clouds'); 
+    } else {
+        body.classList.add('weather-default'); 
+    }
+
 });
    
 
@@ -86,8 +107,30 @@ select.addEventListener('change', function(e){
     getWeatherData(cityname);
 });
 
-/* 1. 날씨나 시간에 따른 배경화면 변경
-   2. 아이콘을 다른것으로 바꿀수 있다.
+/* function changeBg(data){
+    let weather = data.weather[0]['main'];
+    html.classList.remove(...html.classList);
+    if(weather === 'Clouds'){
+        html.classList.add('weather-clouds');
+    } else if(weather === 'Clear'){
+        html.classList.add('weather-clear'); 
+    } else if(weather === 'Thunderstorm'){
+        html.classList.add('weather-thunderstorm'); 
+    } else if(weather === 'Dizzle'){
+        html.classList.add('weather-thunderstorm'); 
+    } else if(weather === 'Rain'){
+        html.classList.add('weather-rain'); 
+    } else if(weather === 'Snow'){
+        html.classList.add('weather-snow'); 
+    } else if(weather === 'Atmosphere'){
+        html.classList.add('weather-clouds'); 
+    } else {
+        html.classList.add('weather-default'); 
+    }
+} */
+
+/* 1. 날씨나 시간에 따른 배경화면 변경(V)
+   2. 아이콘을 다른것으로 바꿀수 있다.(V)
    3.  */
 
 /* function myfunc(data){

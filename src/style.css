@@ -3,8 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-size: cover;
+    background-image: url('https://source.unsplash.com/v9bnfMCyKbg/1600x900');
+    box-shadow: inset 0 0 0 1000px rgba(1,1,0,0.4);
+    height: 100%;
+}
+.weather-default{
+    background-image: url('https://source.unsplash.com/v9bnfMCyKbg/1600x900');
+}
+.weather-clear{
+    background-image: url('https://source.unsplash.com/PEm_sLmJT-w/1600x900');
+}
+.weather-clouds{
+    background-image: url('https://source.unsplash.com/78wDBw9ajUk/1600x900');
+}
+.weather-thunderstorm{
+    background-image: url('https://source.unsplash.com/jh2KTqHLMjE/1600x900');
+}
+.weather-rain{
+    background-image: url('https://source.unsplash.com/22x7fxFpl_8/1600x900');
+}
+.weather-snow{
+    background-image: url('https://source.unsplash.com/2V30zQZAIPs/1600x900');
+}
 body{
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
