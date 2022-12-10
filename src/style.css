@@ -27,6 +27,9 @@ body {
 .weather-snow{
     background-image: url('https://source.unsplash.com/2V30zQZAIPs/1600x900');
 }
+.weather-mist{
+    background-image: url('https://source.unsplash.com/7CME6Wlgrdk/1600x900');
+}
 body{
     /* background-color: lightblue; */
     display: flex;
