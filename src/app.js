@@ -107,6 +107,65 @@ select.addEventListener('change', function(e){
     getWeatherData(cityname);
 });
 
+<<<<<<< HEAD
+
+// 현재위치
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  
+  function showPosition(position) {
+    let pos = {
+      lat: position.coords.latitude,
+      lon: position.coords.longitude
+    }
+  
+    getCurrentWeatherData(pos.lat, pos.lon)  
+  }
+  
+  function getCurrentWeatherData(lat, lon) {
+    // 도시명 업데이트
+    API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+    
+    fetch(API_URL)
+    .then(function(응답데이터){
+      return 응답데이터.json()
+    })
+    .then(function(data){
+      console.log(data);
+      showWeather(data)
+    })
+  
+  } // getCurrentWeatherData
+  
+  getLocation();
+/* function changeBg(data){
+    let weather = data.weather[0]['main'];
+    html.classList.remove(...html.classList);
+    if(weather === 'Clouds'){
+        html.classList.add('weather-clouds');
+    } else if(weather === 'Clear'){
+        html.classList.add('weather-clear'); 
+    } else if(weather === 'Thunderstorm'){
+        html.classList.add('weather-thunderstorm'); 
+    } else if(weather === 'Dizzle'){
+        html.classList.add('weather-thunderstorm'); 
+    } else if(weather === 'Rain'){
+        html.classList.add('weather-rain'); 
+    } else if(weather === 'Snow'){
+        html.classList.add('weather-snow'); 
+    } else if(weather === 'Atmosphere'){
+        html.classList.add('weather-clouds'); 
+    } else {
+        html.classList.add('weather-default'); 
+    }
+} */
+=======
+>>>>>>> 57fc3b7551d2326e8dc0e679bc5d56aee46f9feb
 
 /* 1. 날씨나 시간에 따른 배경화면 변경(V)
    2. 아이콘을 다른것으로 바꿀수 있다.(V)
